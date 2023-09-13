@@ -1,4 +1,3 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in TwitchAmazonIdentityLinkingServiceRubyClient.gemspec
-gemspec
+# Specify your gem's dependencies i
