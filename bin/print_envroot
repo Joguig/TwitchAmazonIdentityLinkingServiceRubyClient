@@ -1,0 +1,3 @@
+#!/apollo/sbin/envroot ruby
+
+puts ENV['ENVROOT']
