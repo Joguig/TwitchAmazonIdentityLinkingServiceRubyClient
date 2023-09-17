@@ -4,7 +4,6 @@ lib = File.expand_path('../lib/TwitchAmazonIdentityLinkingServiceRubyClient/vers
 
 Gem::Specification.new do |spec|
   spec.name          = "TwitchAmazonIdentityLinkingServiceRubyClient"
-  spec.version       = TwitchAmazonIdentityLinkingServiceRubyClient::VERSION
   spec.authors       = ["Dai"]
   spec.email         = ["daiwe@amazon.com"]
 
