@@ -1,24 +1,35 @@
 # coding: utf-8
-require File.expand_path('../lib/TwitchAmazonIdentityLinkingServiceRubyClient/version', __FILE__)
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'TwitchAmazonIdentityLinkingServiceRubyClient/version'
 
-Gem::Specification.new do |gem|
-  gem.add_runtime_dependency 'bunny', '>= 1.6.1'
-  gem.add_runtime_dependency 'carrot-top', '~> 0.0.7'
-  gem.add_runtime_dependency 'multi_json', '~> 1.5'
-  gem.add_development_dependency 'rspec', '~> 3.0'
-  gem.add_development_dependency 'simplecov', '~> 0.7.1'
+Gem::Specification.new do |spec|
+  spec.name          = "TwitchAmazonIdentityLinkingServiceRubyClient"
+  spec.version       = TwitchAmazonIdentityLinkingServiceRubyClient::VERSION
+  spec.authors       = ["Dai"]
+  spec.email         = ["daiwe@amazon.com"]
 
-  gem.name = 'hutch'
-  gem.summary = 'Easy inter-service communication using RabbitMQ.'
-  gem.description = 'Hutch is a Ruby library for enabling asynchronous ' +
-                    'inter-service communication using RabbitMQ.'
-  gem.version = Hutch::VERSION.dup
-  gem.authors = ['Harry Marr']
-  gem.email = ['developers@gocardless.com']
-  gem.homepage = 'https://github.com/gocardless/hutch'
-  gem.require_paths = ['lib']
-  gem.license = 'MIT'
-  gem.executables = ['hutch']
-  gem.files = `git ls-files`.split("\n")
-  gem.test_files = `git ls-files -- spec/*`.split("\n")
+  spec.summary       = %q{summary}
+  spec.description   = %q{description}
+  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+
+  # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
+  # delete this section to allow pushing this gem to any host.
+  # if spec.respond_to?(:metadata)
+  #   spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
+  # else
+  #   raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
+  # end
+
+  #spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
+  spec.files << "TwitchAmazonIdentityLinkingServiceRubyClient.gemspec"
+  spec.files += Dir.glob("lib/**/*.rb")
+  spec.files += Dir.glob("lib/**/*.pem")
+  spec.bindir        = "exe"
+  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  spec.require_paths = ["lib"]
+
+  spec.add_development_dependency "bundler", "~> 1.11"
+  spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "rspec", "~> 3.0"
 end
